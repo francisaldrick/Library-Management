@@ -21,7 +21,7 @@
         <a class="nav-link" href='dispbook'>Books</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href='stdnt'>Students</a>
+        <a class="nav-link" href="#">Students</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/login">Librarian</a>
@@ -36,6 +36,3 @@
     </form>
   </div>
 </nav>
-</section>
-</body>
-</html>
