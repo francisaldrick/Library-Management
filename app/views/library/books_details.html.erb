@@ -17,7 +17,7 @@ body{
 <body> 
 <section id='navbar'>
 <nav style="height:75px;font-size:20px"class="navbar navbar-expand-lg navbar-light bg-white">
-  <a class="nav-link" style="color:black;" href="#">Home</a>
+  <a class="nav-link" style="color:black;" href="/home">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -42,28 +42,30 @@ body{
     </ul>
   </div>
 </nav>
-<div style="margin:150px 450px 0px 450px;">
+<div class="container" style="margin:150px 450px 0px 450px; background-color:white; padding:2%">
+<h1 align="center">Book Details</h1>
 <form>
   <div class="form-group">
-    <label>Book Name</label>
+    <label><b>ISBN</b></label>
     <input type="bname" class="form-control" aria-describedby="emailHelp">
     <small id="emailHelp" class="form-text text-muted"></small>
   </div>
   <div class="form-group">
-    <label>Author Name</label>
+    <label><b>Book Name</b></label>
     <input type="bname" class="form-control" aria-describedby="emailHelp">
     <small id="emailHelp" class="form-text text-muted"></small>
   </div>
   <div class="form-group">
-  <label>ISBI Number</label>
+  <label><b>Author Name</b></label>
   <input type="bname" class="form-control" aria-describedby="emailHelp">
   <small id="emailHelp" class="form-text text-muted"></small>
   </div>
   <div class="form-group">
-    <label for="exampleFormControlTextarea1">Description</label>
+    <label for="exampleFormControlTextarea1"><b>Description</b></label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
-  <button type="submit" class="btn btn-light">Submit</button>
-
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
 </body>
 </html>

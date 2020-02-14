@@ -13,8 +13,9 @@ body{
 }
 </style>
 <body>
+<section id='navbar'>
 <nav style="height:75px;font-size:20px"class="navbar navbar-expand-lg navbar-light bg-white">
-  <a class="nav-link" style="color:black;" href="#">Home</a>
+  <a class="nav-link" style="color:black;" href="/home">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -39,11 +40,12 @@ body{
     </ul>
   </div>
 </nav>
+<div style="margin-top:15%;"class="container">
 <div class="row">
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Book Details</h5>
+        <h3 class="card-title">Book Details</h3>
         <p class="card-text">Click below button to add book details.</p>
         <a href='/addbook' class="btn btn-primary">Add Details</a>
       </div>
@@ -52,12 +54,13 @@ body{
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Student Details</h5>
+        <h3 class="card-title">Student Details</h3>
         <p class="card-text">Click below button to add student details.</p>
         <a href='/addstudent' class="btn btn-primary">Add Details</a>
       </div>
     </div>
   </div>
+</div>
 </div>
 </body>
 </html>
