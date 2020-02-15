@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get '/home', to:'library#index'
   get '/login', to:'library#librarian'
   get '/addbook', to:'library#books_details'
+  post '/addbook', to:'library#displabook'
+  post '/addstudent', to:'library#adst'
   get '/addstudent', to:'library#student_details'
   get '/addchoose', to:'library#new'
   get '/dispbook', to:'library#displaybook'

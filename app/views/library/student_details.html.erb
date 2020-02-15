@@ -42,22 +42,23 @@ body{
 </nav>
 <div style="margin:150px 450px 0px 450px; background-color:white; padding:2%;">
 <h1 align="center">Student Details</h1>
-<form>
-  <div class="form-group">
-    <label ><b>Admission Number</b></label>
-    <input type="bname" class="form-control" aria-describedby="emailHelp">
-    <small id="emailHelp" class="form-text text-muted"></small>
-  </div>
-  <div class="form-group">
-    <label ><b>Student Name</b></label>
-    <input type="bname" class="form-control" aria-describedby="emailHelp">
-    <small id="emailHelp" class="form-text text-muted"></small>
-  </div>
-  <div class="form-group">
-  <label ><b>Address</b></label>
-  <input type="bname" class="form-control" aria-describedby="emailHelp">
-  <small id="emailHelp" class="form-text text-muted"></small>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+<%= form_with scope: :library, local: true do |form| %>
+  <p>
+    <%= form.label :Admissionnumber %><br>
+    <%= form.text_field :Admissionnumber %>
+  </p>
+ 
+  <p>
+    <%= form.label :Studentname %><br>
+    <%= form.text_area :Studentname %>
+  </p>
+  <p>
+    <%= form.label :Address %><br>
+    <%= form.text_area :Address %>
+  </p>
+   <p>
+    <%= form.submit %>
+  </p>
+<% end %>
 </body>
 </html>

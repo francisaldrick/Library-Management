@@ -1,17 +1,13 @@
 <html>
 <head>
-</head>
-<body>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 </head>
 <style>
 body{
-  width:100%;
-  #height: 400px;
-  opacity:.96;
-  background-image: url("images/library.jpeg");
+  opacity:0.96;
+  background-image: url("images/lib.jpeg");
 }
 </style>
 <body> 
@@ -44,28 +40,34 @@ body{
 </nav>
 <div class="container" style="margin:150px 450px 0px 450px; background-color:white; padding:2%">
 <h1 align="center">Book Details</h1>
-<form>
-  <div class="form-group">
-    <label><b>ISBN</b></label>
-    <input type="bname" class="form-control" aria-describedby="emailHelp">
-    <small id="emailHelp" class="form-text text-muted"></small>
-  </div>
-  <div class="form-group">
-    <label><b>Book Name</b></label>
-    <input type="bname" class="form-control" aria-describedby="emailHelp">
-    <small id="emailHelp" class="form-text text-muted"></small>
-  </div>
-  <div class="form-group">
-  <label><b>Author Name</b></label>
-  <input type="bname" class="form-control" aria-describedby="emailHelp">
-  <small id="emailHelp" class="form-text text-muted"></small>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1"><b>Description</b></label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+
+<div class="form-group">
+<%= form_with scope: :library, local: true do |form| %>
+
+  <p>
+    <%= form.label :ISBN %><br>
+    <%= form.text_area :ISBN %>
+  </p>
+
+  <p>
+    <%= form.label :Book %><br>
+    <%= form.text_field :Book %>
+  </p>
+ 
+  <p>
+    <%= form.label :Author %><br>
+    <%= form.text_area :Author %>
+  </p>
+
+  <p>
+    <%= form.label :Description %><br>
+    <%= form.text_area :Description %>
+  </p>
+ 
+  <p>
+    <%= form.submit :Save %>
+  </p>
+<% end %>
 </div>
 </body>
 </html>

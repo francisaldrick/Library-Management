@@ -45,19 +45,19 @@ body{
 <table style="margin-top:15%;" class="table table-hover table-light">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Admn.No</th>
-      <th scope="col">Name</th>
+      <th scope="col">Admissionnumber</th>
+      <th scope="col">Studentname</th>
       <th scope="col">Address</th>
     </tr>
   </thead>
   <tbody>
+  <% @library.each do |library| %>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
+      <td><%= library.Admissionnumber %></td>
+      <td><%= library.Studentname %></td>
+      <td><%= library.Address %></td>
+  </tr>
+  <% end %>    
   </tbody>
 </table>
 </div>

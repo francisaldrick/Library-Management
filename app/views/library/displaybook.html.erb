@@ -44,7 +44,6 @@ body{
 <table style="margin-top:15%;" class="table table-hover table-light">
   <thead>
     <tr>
-      <th>#</th>
       <th>ISBN</th>
       <th>Book Name</th>
       <th>Author Name</th>
@@ -54,16 +53,18 @@ body{
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="col">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
+    <% @library.each do |library| %>
+      <tr>
+        <td><%= library.ISBN %></td>
+        <td><%= library.Book %></td>
+        <td><%= library.Author %></td>
+        <td><%= library.Description %></td>
+    
       <td>
       <button type="button" class="btn btn-dark">Click Here</button>
       </td>
     </tr>
+    <% end %>
   </tbody>
 </table>
 
