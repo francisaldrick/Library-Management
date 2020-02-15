@@ -6,15 +6,13 @@
 </head>
 <style>
 body{
-  width:100%;
-  #height: 400px;
   opacity:.96;
   background: url("images/lib.jpeg");
 }
 </style>
 <body> 
 <section id='navbar'>
-<nav style="height:75px;font-size:20px"class="navbar navbar-expand-lg navbar-light bg-white">
+<nav style="height:65px;font-size:20px"class="navbar navbar-expand-lg navbar-light bg-white">
   <a class="nav-link" style="color:black;" href="/home">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -49,25 +47,22 @@ body{
       <th>Author Name</th>
       <th>Brief Description</th>
       <th>View Details</th>
-
     </tr>
   </thead>
   <tbody>
     <% @library.each do |library| %>
-      <tr>
+     <tr>
         <td><%= library.ISBN %></td>
         <td><%= library.Book %></td>
         <td><%= library.Author %></td>
         <td><%= library.Description %></td>
-    
       <td>
-      <button type="button" class="btn btn-dark">Click Here</button>
+       <button type="button" class="btn btn-dark">Click Here</button>
       </td>
     </tr>
     <% end %>
   </tbody>
 </table>
-
 </div>
 </body>
 </html>

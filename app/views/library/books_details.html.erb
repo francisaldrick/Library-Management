@@ -12,7 +12,7 @@ body{
 </style>
 <body> 
 <section id='navbar'>
-<nav style="height:75px;font-size:20px"class="navbar navbar-expand-lg navbar-light bg-white">
+<nav style="height:65px;font-size:20px"class="navbar navbar-expand-lg navbar-light bg-white">
   <a class="nav-link" style="color:black;" href="/home">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -44,29 +44,29 @@ body{
 <div class="form-group">
 <%= form_with scope: :library, local: true do |form| %>
 
-  <p>
-    <%= form.label :ISBN %><br>
-    <%= form.text_area :ISBN %>
-  </p>
+  <div class="form-group">
+    <%= form.label :ISBN, value="ISBN" %><br>
+    <%= form.text_field :ISBN, class: "form-control", placeholder: "ISBN" %>
+  </div>
 
-  <p>
-    <%= form.label :Book %><br>
-    <%= form.text_field :Book %>
-  </p>
+  <div class="form-group">
+    <%= form.label :Book,value="Book Name" %><br>
+    <%= form.text_field :Bookname , class: "form-control", placeholder: "Bookname " %>
+  </div>
  
-  <p>
-    <%= form.label :Author %><br>
-    <%= form.text_area :Author %>
-  </p>
+  <div class="form-group">
+    <%= form.label :Author, value="Author Name" %><br>
+    <%= form.text_field :Authorname, class: "form-control", placeholder: "Authorname" %>
+  </div>
 
-  <p>
-    <%= form.label :Description %><br>
-    <%= form.text_area :Description %>
-  </p>
+  <div class="form-group">
+    <%= form.label :Description, value="Description" %><br>
+    <%= form.text_field :Description, class: "form-control", placeholder: "Description" %>
+  </div>
  
-  <p>
-    <%= form.submit :Save %>
-  </p>
+  <div>
+    <%= form.submit :Save, class: "btn btn-primary"%>
+  </div>
 <% end %>
 </div>
 </body>
