@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get '/addchoose', to:'library#new'
   get '/dispbook', to:'library#displaybook'
   get '/stdnt', to:'library#student'
+  
+
 
   resources :library
 

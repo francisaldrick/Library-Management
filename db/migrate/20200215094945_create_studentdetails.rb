@@ -5,7 +5,6 @@ class CreateStudentdetails < ActiveRecord::Migration[6.0]
       t.string :Studentname
       t.string :Address
 
-
       t.timestamps
     end
   end
