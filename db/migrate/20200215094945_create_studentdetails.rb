@@ -3,7 +3,7 @@ class CreateStudentdetails < ActiveRecord::Migration[6.0]
     create_table :studentdetails do |t|
       t.string :Admissionnumber
       t.string :Studentname
-      t.string :Address
+      t.string :Address 
 
       t.timestamps
     end

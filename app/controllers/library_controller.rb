@@ -1,4 +1,8 @@
 class LibraryController < ApplicationController
+    def assign
+        @library = Bookdetail.all
+        @student = Studentdetail.all
+    end
     def student
         @library = Studentdetail.all
     end
